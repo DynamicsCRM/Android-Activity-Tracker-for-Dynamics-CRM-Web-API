@@ -1,0 +1,52 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="com.microsoft.activitytracker.classes.models.Entity"/>
+        <variable name="parent" type="Entity"/>
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinated_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@id/appbar"
+            layout="@layout/app_bar_layout"/>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/title_layout"
+                    layout="@layout/item_title"
+                    app:contextEntity="@{parent}"/>
+
+                <include
+                    android:id="@+id/subject_layout"
+                    layout="@layout/create_subject_section"/>
+
+                <include
+                    android:id="@+id/date_layout"
+                    layout="@layout/create_date_section"/>
+
+                <include
+                    android:id="@+id/notes_layout"
+                    layout="@layout/create_notes_section"/>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</layout>
+

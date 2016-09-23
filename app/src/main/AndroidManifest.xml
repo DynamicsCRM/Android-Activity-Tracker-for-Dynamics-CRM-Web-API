@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.microsoft.activitytracker">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".classes.ActivityTracker"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/ActivityTracker"
+        tools:replace="theme">
+
+        <activity
+            android:name="com.microsoft.aad.adal.AuthenticationActivity"
+            android:theme="@style/ActivityTracker.Activities"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".ui.MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:theme="@style/ActivityTracker.Activities">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".ui.SearchActivity" />
+        </activity>
+        <activity
+            android:name=".ui.CreateActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:theme="@style/ActivityTracker.Activities"
+            android:windowSoftInputMode="adjustPan">
+
+        </activity>
+        <activity
+            android:name=".ui.ItemActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:theme="@style/ActivityTracker.Activities"
+            android:parentActivityName=".ui.MainActivity">
+
+        </activity>
+        <activity
+            android:name=".ui.SetupActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:theme="@style/ActivityTracker.Activities"
+            android:launchMode="singleTop">
+
+        </activity>
+
+        <activity
+            android:name=".ui.SearchActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:theme="@style/ActivityTracker.Activities"
+            android:launchMode="singleTop">
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="com.google.android.gms.actions.SEARCH_ACTION" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Activity Tracker</string>
+
+    <string name="subject_label">Subject</string>
+    <string name="date_label">Date</string>
+    <string name="notes_label">Notes</string>
+    <string name="search_hint">Search Organization…</string>
+    <string name="username_hint">Enter your Username</string>
+    <string name="org_hint">Enter the Url to your Org</string>
+    <string name="authority_error">Could not get Authority URI for this Endpoint</string>
+
+    <string name="logout_item">Logout</string>
+    <string name="network_error">Network is unavailable</string>
+    <string name="endpoint_required">Organization endpoint is required</string>
+    <string name="invalid_endpoint">Invalid organization endpoint</string>
+    <string name="orgservice_error">Client isn\'t logged in</string>
+
+    <string name="login_button">Start Login</string>
+
+    <string name="default_data">--</string>
+
+    <string name="check_in_subject">Check In with %1$s on %2$s</string>
+
+    <string name="creating_activity">Creating Activity</string>
+    <string name="warning_error">You are about to go back without submitting your activity. Are you sure you want to go back?</string>
+    <string name="subject_required">A subject is required to create an Activity.</string>
+
+    <string name="yes">Yes</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="submit">Submit</string>
+
+    <string name="no_complete_activities">No Completed Activities</string>
+
+    <string name="check_in">Check In</string>
+    <string name="note">Note</string>
+    <string name="follow_up">Follow Up</string>
+    <string name="phone_call">Phone Call</string>
+
+    <string name="primary_name_transition">transition_primary_name</string>
+    <string name="subtitle_transition">transition_subtitle</string>
+
+    <string name="record_phone_description">Call this records phone number.</string>
+    <string name="email_record_description">Email this record\'s email address.</string>
+    <string name="entity_type_icon_description">Entity type icon</string>
+    <string name="activity_type_icon_description">Activity type icon</string>
+    <string name="map_icon_description">Open map to location icon</string>
+    <string name="search">Search</string>
+</resources>

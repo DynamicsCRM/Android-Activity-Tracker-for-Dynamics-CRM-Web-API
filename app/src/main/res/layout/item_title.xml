@@ -1,0 +1,54 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="com.microsoft.activitytracker.classes.models.Entity"/>
+        <variable name="contextEntity" type="Entity"/>
+    </data>
+
+    <merge>
+
+        <TextView
+            android:id="@+id/item_title"
+            style="@style/ActivityTracker.TextView.PrimaryName"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text="@{contextEntity.name ?? @string/default_data}"
+            app:entityType="@{contextEntity.LogicalName}"
+            android:textColor="@color/contact_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/sub1"
+            style="@style/ActivityTracker.TextView.Subtitle"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/default_data"
+            app:titleSub1="@{contextEntity}"
+            android:textColor="#999999"
+            android:layout_marginTop="5dp"
+            android:maxLines="1"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/sub2"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#999999"
+            android:text="@string/default_data"
+            app:titleSub2="@{contextEntity}"
+            android:layout_marginTop="1dp"
+            android:maxLines="1"
+            android:textSize="14sp"/>
+
+    </merge>
+
+</layout>

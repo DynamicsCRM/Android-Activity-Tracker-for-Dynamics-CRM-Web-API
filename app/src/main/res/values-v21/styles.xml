@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ActivityTracker" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:colorPrimary">@color/primary</item>
+        <item name="android:colorBackground">@color/background_light</item>
+        <item name="android:colorAccent">@color/accent</item>
+        <item name="android:textColorHint">@color/hint_disabled_dark</item>
+        <item name="android:windowBackground">@color/background_light</item>
+
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+        <item name="android:windowSharedElementsUseOverlay">true</item>
+
+        <item name="android:statusBarColor">@color/immersive_bars</item>
+        <item name="android:navigationBarColor">@color/immersive_bars</item>
+    </style>
+
+    <style name="ActivityTracker.Activities">
+
+        <item name="android:windowSharedElementEnterTransition">@android:transition/move</item>
+        <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
+        <item name="android:windowSharedElementReenterTransition">@android:transition/move</item>
+        <item name="android:windowSharedElementReturnTransition">@android:transition/move</item>
+    </style>
+
+    <style name="Widget.ActivityTracker.Toolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="titleTextAppearance">@android:style/TextAppearance.Material.Widget.ActionBar.Title</item>
+        <item name="android:background">@color/primary</item>
+        <item name="android:theme">@style/ActivityTrackerDarkOverlay</item>
+        <item name="android:minHeight">?attr/actionBarSize</item>
+    </style>
+
+    <style name="Widget.ActivityTracker.Toolbar.SmallCapsTitle">
+        <item name="titleTextAppearance">@style/TextAppearance.ToolbarTitleSmallCaps</item>
+    </style>
+
+    <style name="Widget.ActivityTracker.Toolbar.ItemToolbar" parent="Widget.ActivityTracker.Toolbar.SmallCapsTitle">
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="selectableItemBackground">?android:selectableItemBackground</item>
+        <item name="selectableItemBackgroundBorderless">?android:selectableItemBackground</item>
+    </style>
+
+    <style name="Widget.ActivityTracker.OverlayToolbar" parent="android:Widget.Material.ActionBar">
+        <item name="android:background">?android:colorPrimary</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="Widget.ActivityTracker.Toolbar.Accent">
+        <item name="android:background">?android:colorAccent</item>
+        <item name="android:titleTextAppearance">@style/TextAppearance.AccentToolbar</item>
+    </style>
+
+    <style name="TextAppearance.AccentToolbar" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Title.Inverse">
+        <item name="android:textColor">@color/text_on_accent</item>
+    </style>
+
+    <style name="TextAppearance.ToolbarTitleSmallCaps" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/text_primary_light</item>
+        <item name="android:fontFeatureSettings">smcp</item>
+        <item name="android:letterSpacing">0.2</item>
+    </style>
+
+    <style name="ActivityTrackerDarkOverlay" parent="@android:style/ThemeOverlay.Material.Dark.ActionBar">
+
+    </style>
+
+    <style name="ActivityTracker.TextView" parent="@android:style/Widget.Material.TextView">
+
+    </style>
+
+    <style name="ActivityTracker.TextView.PrimaryName">
+        <item name="android:transitionName">@string/primary_name_transition</item>
+    </style>
+
+    <style name="ActivityTracker.TextView.Subtitle">
+        <item name="android:transitionName">@string/subtitle_transition</item>
+    </style>
+
+</resources>

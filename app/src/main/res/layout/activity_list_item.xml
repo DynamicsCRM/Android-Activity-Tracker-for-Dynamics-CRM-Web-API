@@ -1,0 +1,68 @@
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="com.microsoft.activitytracker.classes.models.Entity"/>
+        <variable name="activity" type="Entity"/>
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="?attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="20dp"
+            app:activityType="@{activity.LogicalName}"
+            android:background="@drawable/activity_circle_background"
+            android:contentDescription="@string/activity_type_icon_description"
+            android:scaleType="center"/>
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="5dp"
+            android:textAlignment="viewEnd"
+            app:formatDate="@{activity.attributes[`actualend`]}"
+            style="@style/TextAppearance.AppCompat.Caption"
+            android:singleLine="true" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="56dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:singleLine="true"
+                android:text="@{activity.name}"
+                style="?android:attr/titleTextStyle" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:maxLines="3"
+                android:text="@{activity.attributes[`description`] ?? activity.attributes[`notetext`]}"
+                style="?android:attr/subtitleTextStyle" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</layout>

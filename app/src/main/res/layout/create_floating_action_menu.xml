@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.microsoft.activitytracker.ui.widgets.FloatingActionMenu
+        android:id="@+id/action_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_anchor="@id/activity_list"
+        app:layout_anchorGravity="bottom|right|end">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/menu_main_button"
+            android:layout_width="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_height="wrap_content"
+            app:backgroundTint = "@color/primary"
+            android:src="@drawable/ic_plus"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/add_checkin"
+            app:backgroundTint="@android:color/white"
+            android:src="@drawable/ic_checkin"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="16dp"
+            android:contentDescription="@string/check_in"
+            android:clickable="true"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/add_annotation"
+            app:backgroundTint="@android:color/white"
+            android:src="@drawable/ic_annotation"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="16dp"
+            android:contentDescription="@string/note"
+            android:clickable="false"
+            android:foreground="@drawable/disable_fab_overlay"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/add_followup"
+            android:src="@drawable/ic_followup"
+            app:backgroundTint="@android:color/white"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="16dp"
+            android:contentDescription="@string/follow_up"
+            android:clickable="false"
+            android:foreground="@drawable/disable_fab_overlay"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/add_phonecall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/phone_call"
+            app:backgroundTint="@android:color/white"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/ic_call"
+            android:clickable="false"
+            android:foreground="@drawable/disable_fab_overlay"/>
+
+    </com.microsoft.activitytracker.ui.widgets.FloatingActionMenu>
+
+</merge>
+

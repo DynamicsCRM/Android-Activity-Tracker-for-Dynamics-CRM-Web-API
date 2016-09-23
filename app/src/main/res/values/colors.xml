@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="primary">#253D5D</color>
+    <color name="accent">@color/primary</color>
+    <!--<color name="primary_dark">#253d5d</color>-->
+    <!--<color name="primary_super_dark">#11261c</color>-->
+
+
+    <color name="contact_color">#0fa8db</color>
+    <color name="opportunity_color">#36b50f</color>
+    <color name="account_color">#ff8000</color>
+
+    <color name="transparent_contact_color">#660fa8db</color>
+    <color name="transparent_opportunity_color">#6636b50f</color>
+    <color name="transparent_account_color">#66ff8000</color>
+    <color name="transparent_activity_color">#665f00d1</color>
+
+    <color name="action_disabled_overlay">#61666666</color>
+
+
+    <!-- common colours -->
+    <!-- 87% -->
+    <!-- 54% -->
+    <!-- 38% -->
+    <color name="text_primary_light">#ffffffff</color>
+    <!-- 70% -->
+    <!-- 30% -->
+    <color name="background_light">#fafafa</color>
+    <color name="immersive_bars">#99000000</color>
+    <!-- this is blended with immersive_bars to produce the desired status bar color i.e. background_super_dark -->
+    <!-- 60% black-->
+    <!-- 12% black -->
+
+    <!-- text (most text uses material theme colours) -->
+    <color name="hint_disabled_dark">#43000000</color> <!-- 26% black -->
+    <color name="text_on_accent">#8f000000</color>
+
+
+</resources>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="com.microsoft.activitytracker.classes.models.Entity"/>
+        <variable name="entity" type="Entity"/>
+    </data>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="center"
+            app:entityType="@{entity.LogicalName}"
+            android:contentDescription="@string/entity_type_icon_description"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="16dp"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/primary_name_attribute"
+                android:textColor="@color/contact_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="@{entity.name}"
+                android:layout_marginBottom="5dp"
+                app:entityType="@{entity.LogicalName}"
+                style="@style/ActivityTracker.TextView.PrimaryName"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/subtitle"
+                android:maxLines="1"
+                android:textSize="14sp"
+                style="?android:attr/subtitleTextStyle"
+                app:entitySubTitle="@{entity}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>
