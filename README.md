@@ -1,3 +1,5 @@
+[![Android App](https://img.shields.io/badge/android-App-brightgreen.svg)](https://opensource.microsoft.com/?sort=Awesomeness&keyword=&tag=android)
+
 # Android Activity Tracker Sample App for Microsoft Dynamics CRM
 
 These instructions describe how to build and run the sample Android Activity Tracker application. 
